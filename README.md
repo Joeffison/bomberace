@@ -37,6 +37,12 @@ make setup-dev
     make play
     ```
 
+Checkout the recording below:
+
+https://github.com/user-attachments/assets/2730215f-1d21-4033-83ce-7fc35394c846
+
+or [here](docs/videos/bomberace_v0.mov "The player destroying some brick walls")
+
 
 ## Contributing
 
