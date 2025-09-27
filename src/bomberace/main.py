@@ -8,7 +8,7 @@ from bomberace.world import World
 pygame.mixer.pre_init(44100, -16, 2, 512)
 pygame.mixer.init()
 pygame.init()
-pygame.display.set_caption('Bomberace - Game by Joeffison')
+pygame.display.set_caption("Bomberace - Game by Joeffison")
 
 pygame.mixer.music.set_volume(settings.VOLUME_PERCENTAGE)
 pygame.mixer.music.load(settings.MUSIC_PATH)

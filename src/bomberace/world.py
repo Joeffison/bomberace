@@ -1,3 +1,4 @@
+import itertools
 import logging
 
 import pygame
@@ -91,22 +92,20 @@ class World:
         self.bombs.remove(bomb)
 
     def colliderect(
-        self, rect: pygame.Rect, mask: pygame.mask.Mask
+        self, rect: pygame.Rect, mask: pygame.mask.Mask | None = None
     ) -> pygame.sprite.Sprite | None:
-        for wall in self.walls:
-            if wall.collide(rect, mask):
-                return wall
-
-        for brick in self.bricks:
-            if brick.collide(rect, mask):
-                return brick
+        for tile in itertools.chain(self.walls, self.bricks):
+            if tile.collide(rect, mask):
+                return tile
 
         return None
 
-    def collides_with_bombs(self, rect: pygame.Rect, mybombs: list = None) -> bool:
+    def collides_with_bombs(
+        self, rect: pygame.Rect, ignore_bombs: list | pygame.sprite.Group = None
+    ) -> bool:
         bombs = self.bombs
-        if mybombs:
-            bombs = (bomb for bomb in self.bombs if bomb not in mybombs)
+        if ignore_bombs:
+            bombs = (bomb for bomb in self.bombs if bomb not in ignore_bombs)
 
         return any(bomb for bomb in bombs if bomb.rect.colliderect(rect))
 

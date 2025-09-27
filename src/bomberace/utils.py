@@ -56,6 +56,7 @@ def split_kenney_sprite_sheet(sprite_sheet_path, sprite_sheet_xml_path):
 
         # padding = 3
         # frame = frame.subsurface(padding, 20 + padding, 75 - padding, 80 - padding)
+        # frame = frame.subsurface(frame.get_bounding_rect())
 
         frames[name] = frame
         if "walk" in name:
