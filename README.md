@@ -1,3 +1,8 @@
+# Bomberace
+Personal project recreating my favorite childhood game using Pygame. This fan-made project is intended for learning and educational purposes only (practicing Pygame), and is not authorized for commercial use.
+
+Please do not redistribute the assets, images, sounds, music, content, etc. without authorization.
+
 ## Setup
 
 ### Prerequisites
@@ -5,6 +10,11 @@
   - **note:** alternatively you can install poetry and python yourself,
 however in that case you have to check pyproject.toml for the appropriate
 python version and you must use `poetry install` instead of `make setup`.
+- download all free assets that do not allow redistribution
+    1. Create a directory free-no-redistribution inside of [assets](assets)
+    2. Please go to https://craftpix.net/freebies/free-robot-sprite/?num=3&count=39&sq=bomb&pos=2
+    3. Download and uncompress the assets
+    4. Move the resulting directory as is to [assets/free-no-redistribution](assets/free-no-redistribution)
 
 
 1. install all dependencies and create the virtual environment with
